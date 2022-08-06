@@ -26,6 +26,15 @@ spec:
       containers:
         - image: wordpress:latest
           name: wordpress
+          env:
+          - name: DB_USER
+            value: root
+          - name: DB_HOST
+            value: mysql
+          - name: DB_PASSWORD
+            value: aStr0ngPassW0rd
+          - name: DB_NAME
+            value: wordpress
           ports:
             - containerPort: 80
               name: http
